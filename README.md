@@ -30,6 +30,10 @@ A chave da Groq fica **só no servidor** (variável `GROQ_API_KEY`) e nunca apar
 
 ## Publicar na Vercel
 
+> ✅ Já publicado em **https://mind-blast-zeta.vercel.app**. Cada `git push` na branch `main` publica uma nova versão automaticamente.
+
+Para publicar em outra conta:
+
 1. Acesse https://vercel.com/new e entre com o GitHub.
 2. Importe o repositório **Projetos-Rafael-iop**.
 3. Em **Framework Preset**, deixe **Other** (o `vercel.json` já configura o resto, não precisa de build).
@@ -44,7 +48,7 @@ Se você adicionar ou trocar a chave depois do deploy, vá em **Deployments → 
 
 ## Testar no seu computador
 
-Precisa do [Node.js](https://nodejs.org) 18 ou mais novo. Não há dependências para instalar.
+Precisa do [Node.js](https://nodejs.org) 22. Não há dependências para instalar.
 
 ```bash
 cp .env.example .env.local     # e coloque sua chave em GROQ_API_KEY
