@@ -1,0 +1,14 @@
+{
+  "name": "mind-blast",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mind Blast — app de estudos com quizzes por ano e matéria e tutor de IA (Groq).",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
