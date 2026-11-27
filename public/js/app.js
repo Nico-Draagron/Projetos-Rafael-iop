@@ -128,7 +128,9 @@ async function send(){
   st.ch.push({r:"u",t:v},msg);draw();
   const body=tutorPayload();
   // Atualiza só se a conversa ainda estiver na tela (o aluno pode ter mudado de pergunta).
-  const show=t=>{msg.t=t;if(st.ch.includes(msg))draw()};
+  // Remove marcações de markdown (**negrito**, # títulos) que o modelo às vezes usa.
+  const clean=t=>t.replace(/\*\*|__/g,"").replace(/^#{1,6}\s+/gm,"");
+  const show=t=>{msg.t=clean(t);if(st.ch.includes(msg))draw()};
   st.busy=true;
   try{
     let r;
